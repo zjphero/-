@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+			}
+			.lifang{
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				position: relative;
+				transform-style: preserve-3d;
+				transform: rotate3d(1,1,1,0deg);
+				transition: all 3s;
+				animation: xuanzhuan 10s infinite alternate;
+			}
+			@keyframes xuanzhuan{
+				from{transform: rotate3d(1,1,1,0deg);}
+				to{transform: rotate3d(1,1,1,720deg);}
+			}
+			.lifang:hover{
+				transform: rotate3d(1,1,1,720deg);
+				
+			}
+			.page{
+				width: 200px;
+				height: 200px;
+				left: 0;
+				top: 0;
+				position: absolute;
+				opacity: 0.6;
+			}
+			.front{
+				background-image: url(imgs/可爱呆萌宠物狗狗图片.jpg);
+				transform: translateZ(100px);
+				background-size: auto 100%;
+			}
+			.back{
+				background-image: url(imgs/大胆人体模特艺术写真图片.jpg);
+				transform: translateZ(-100px);
+				background-size: 100% auto;
+			}
+			.left{
+				background-image: url(imgs/微胖丰臀美女写真图片.jpg);
+				transform: rotateY(-90deg) translateZ(100px);
+				background-size: 100% auto;
+			}
+			.right{
+				background-image: url(imgs/拿着树叶遮住眼睛的美女图片.jpg);
+				transform: rotateY(90deg) translateZ(100px);
+				background-size: 100% auto;
+			}
+			.top{
+				background-image: url(imgs/枯黄枫叶和干柠檬片图片.jpg);
+				transform: rotateX(90deg) translateZ(100px);
+				background-size: auto 100%;
+			}
+			.bottom{
+				background-image: url(imgs/手捧细沙图片.jpg);
+				transform: rotateX(-90deg) translateZ(100px);
+				background-size: 100% auto;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="lifang">
+			<div class="page front"></div>
+			<div class="page back"></div>
+			<div class="page left"></div>
+			<div class="page right"></div>
+			<div class="page top"></div>
+			<div class="page bottom"></div>
+		</div>
+	</body>
+</html>
