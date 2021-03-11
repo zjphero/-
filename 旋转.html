@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				margin: 450px 0px auto;
+				width: 100px;
+				height: 200px;
+				background: bisque;
+				transition: all 1s ease-in;
+				animation: xuanzhuan 1s infinite alternate, shuiping 1s infinite alternate;
+				
+			}
+			@keyframes xuanzhuan{
+				from{}
+				to{transform: rotate(3600deg);}
+			}
+			@keyframes shuiping{
+				from{}
+				to{transform: translateX(300px);}
+			}
+			#d1:hover{
+				transform: rotate(3600deg);
+			}
+			
+			#d2{
+				margin: 200px auto;
+				width: 200px;
+				height: 200px;
+				background: cyan;
+				transform: rotateZ(45deg);
+				text-align: center;
+				line-height: 200px;
+				padding: 0px;
+			}
+			body{
+				perspective: 1000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<div id="d2">3D旋转</div>
+	</body>
+</html>
