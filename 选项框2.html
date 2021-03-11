@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.selector{
+				width: 200px;
+				height: 400px;
+				margin: 300px auto;
+				/* background-color: antiquewhite; */
+			}
+			.selector #d1{
+				width: 200px;
+				height: 300px;
+				border: coral 1px solid;
+			}
+			#bgyellow:checked~#d1{
+				background-color: yellow;
+			}
+			#bgblue:checked~#d1{
+				background-color: deepskyblue;
+			}
+			#bgpink:checked~#d1{
+				background-color: pink;
+			}
+			.selector .btn{
+				width: 100px;
+				height: 200px;
+				text-align: center;
+				line-height: 50px;
+				
+				background-color: beige;
+				border: #999999 1px solid;
+				border-radius: 3px;
+				transition: all 0.3s;
+			}
+			.selector .btn:hover{
+				box-shadow: 0 0 5px #999;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		
+		
+		<div class="selector">
+			<label class="btn" for="bgyellow">黄色</label>
+			<label class="btn" for="bgblue">蓝色</label>
+			<label class="btn" for="bgpink">粉色</label>
+			<br>
+			<input type="radio" name="color" id="bgyellow" value="黄色" hidden="hidden"/>
+			
+			<input type="radio" name="color" id="bgblue" value="蓝色" hidden="hidden"/>
+			
+			<input type="radio" name="color" id="bgpink" value="粉色" hidden="hidden"/>
+			
+			<div id="d1"></div>
+		</div>
+	</body>
+</html>
